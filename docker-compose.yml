@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx-custom-3
+    container_name: webserver
+    volumes:
+      - /root/assessment:/usr/share/nginx/html/
+    ports:
+      - 8080:80
