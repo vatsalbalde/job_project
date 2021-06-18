@@ -12,6 +12,7 @@ pipeline {
                 sh "sed -i 's/${old_title}/${new_title}/g' index.html"
                 sh "sed -i '/BUILD ID=/ c \"BUILD ID= ${BUILD_ID}\"' index.html"
                 sh "sed -i '/BUILD URL=/ c \"BUILD URL= ${BUILD_URL}\"' index.html"
+                sh "sed -i '/JOB_NAME=/ c \"JOB_NAME= ${JOB_NAME}\"' index.html" 
                 sh "sed -i '/WORKSPACE=/ c \"WORKSPACE= ${WORKSPACE}\"' index.html"
             }
         }
